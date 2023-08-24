@@ -1,5 +1,5 @@
 :root {
-    --body: #002b51;
+    --body: #002749;
     --head: #00325E;
     --border: #004E92;
     --search: #0075BE;
@@ -12,17 +12,21 @@
     -webkit-box-sizing: border-box;
 }
 
+html {
+    background-color: black;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
 html, body{
     width: 100%;
     overflow-x: hidden;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 body {
     position: relative;
     background-color: var(--body);
     color: white;
-    margin: 0;
+    margin: 0 auto;
     cursor: context-menu;
 }
 
@@ -33,26 +37,28 @@ header {
     top: 0;
     width: 100%;
     z-index: 2;
+    overflow: hidden;
 }
 
 header h1 {
     text-align: center;
     font-size: 1.5em;
-    padding: 10px 0 0 30px;
 }
 
 header i {
     font-size: 2em;
     position: absolute;
+    top: 10px;
     left: 30px;
     cursor: pointer;
 }
 
 .category {
-    padding-top: 95px;
+    padding-top: 100px;
     height: 250px;
     background: url(./category.jpg);
     background-position: center;
+    background-size: cover;
 }
 
 .category h2 {
@@ -126,7 +132,7 @@ main h2 { font-size: 1.6em; }
 #button-signin, #button-login {
 	margin: 20px 0;
 	padding: 12px 0px;
-	width: 100%;
+    width: 200px;
 	font-size: 0.8em;
 	color: white;
 	border: none;
@@ -165,24 +171,23 @@ nav ul li {
 
 nav ul li a i {
     color: white;
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
+nav ul li a .bi-search { font-size: 1.2em; }
 
-nav ul li a .bi-search { font-size: 1.6em; }
-
-nav ul li a .bi-person-fill { font-size: 2.2em; }
+nav ul li a .bi-person-fill { font-size: 1.8em; }
 
 nav ul li:nth-child(1) { padding: 10px 10px 25px 20px; }
 
 nav ul li:nth-child(3) { padding-top: 12px; }
 
-nav ul li:nth-child(5) { padding-top: 5px; }
+nav ul li:nth-child(5) { padding-top: 12px; }
 
-nav ul li:nth-child(7) { padding: 12px 20px 25px 10px; }
+nav ul li:nth-child(7) { padding: 5px 20px 25px 10px; }
 
 .divider {
-    margin-top: 15px;
+    margin-top: 10px;
     height: 40px;
     width: 10px;
     background-color: var(--border);
@@ -200,10 +205,12 @@ nav ul li:nth-child(7) { padding: 12px 20px 25px 10px; }
         
     header h1 {
         font-size: 2em;
-        padding: 10px 0;
     }
     
-    header i { font-size: 2.5em; }
+    header i { 
+        font-size: 2.5em; 
+        top: 15px;
+    }
     
     .category {
         padding-top: 100px;
@@ -243,26 +250,44 @@ nav ul li:nth-child(7) { padding: 12px 20px 25px 10px; }
         
     #three-points { font-size: 3em; }
 
+    .buttons {
+        gap: 30px;
+     }
+
     #button-signin, #button-login {
         padding: 14px 0px;
         font-size: 1em;
+        width: 300px;
     }
     
     nav ul { border-top: 7px solid var(--border); }
     
     nav ul li { padding: 10px 0 25px; }
-    
-    nav ul li a i { font-size: 1.5em; }
+
+    nav ul li a i { font-size: 2em; }
+
+    nav ul li a .bi-search { font-size: 1.8em; }
+
+    nav ul li a .bi-person-fill { font-size: 2.4em; }
+
+    nav ul li:nth-child(3) { padding-top: 14px; }
+
 }
 
 @media (min-width: 1024px) {
+
+    body, header, nav {
+        max-width: 1024px;
+    }
     
     header h1 {
         font-size: 2.5em;
-        padding: 10px 0;
     }
     
-    header i { font-size: 3em; }
+    header i { 
+        font-size: 3em; 
+        top: 20px;
+    }
     
     .category h2 {
         font-size: 5em;
@@ -304,14 +329,18 @@ nav ul li:nth-child(7) { padding: 12px 20px 25px 10px; }
         padding: 32px 0;
         font-size: 1.5em;
     }
-
-    .buttons { gap: 20px; }
     
-    nav ul li:nth-child(1) { padding: 10px 10px 25px 30px; }
-    
-    nav ul li:nth-child(5) { padding: 10px 30px 25px 10px; }
-
     nav ul li a i { font-size: 2em; }
 
     nav ul li a .bi-search { font-size: 2em; }
+
+    nav ul li a .bi-person-fill { font-size: 2.6em; }
+
+    nav ul li:nth-child(1) { padding: 10px 10px 25px 30px; }
+
+    nav ul li:nth-child(3) { padding-top: 12px; }
+
+    nav ul li:nth-child(5) { padding-top: 10px; }
+
+    nav ul li:nth-child(7) { padding: 5px 30px 25px 10px; }
 }
